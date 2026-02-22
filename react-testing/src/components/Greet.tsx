@@ -6,7 +6,7 @@ type GreetProps = {
 
 function Greet({name} : GreetProps) {
   return (
-    <div>Hi {name}</div>
+    <div>Hi {name ? name : ''}</div>
   )
 }
 
