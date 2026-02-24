@@ -4,7 +4,7 @@ type UseCounterProps = {
     initialCount?: number
 }
 
-function useCounter({ initialCount = 0 }: UseCounterProps) {
+function useCounter({ initialCount = 0 }: UseCounterProps = {}) {
     const [count, setCount] = useState(initialCount);
     const increment = () => setCount(count + 1)
     const decrement = () => setCount(count - 1)
