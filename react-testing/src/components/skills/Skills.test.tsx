@@ -8,7 +8,7 @@ describe('Skills', () => {
     test('render skills component', () => {
         render(<Skills skills={skills} />);
         const listComponent = screen.getByRole('list');
-        expect(listComponent).toBeInTheDocument();
+        expect(listComponent).toBeInTheDocument()
     })
 
     test('render list items', () => {
@@ -35,7 +35,7 @@ describe('Skills', () => {
 
     test('render for Start Learning button present after sometime', async () => {
         const view = render(<Skills skills={skills} />);
-        logRoles(view.container)
+        // logRoles(view.container)
         // screen.debug();
         const buttonElement = await screen.findByRole('button', {
             name: 'Start Learning'
